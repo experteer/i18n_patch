@@ -1,0 +1,8 @@
+pkg/*
+*.gem
+.bundle
+.idea
+*~
+
+# bundler
+Gemfile.lock
