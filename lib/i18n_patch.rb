@@ -190,6 +190,7 @@ end
 module ActionView
   class Base
     def _pick_partial_template_with_pjpp_hack(partial_path) #:nodoc:
+      Rails.logger.debug( caller.join("\n"))
       unless $pjpp_skip_view_path_hack
         if partial_path.include?('/')
           path = "#{$pjpp_locale}/#{$pjpp_template_set}/" + File.join(File.dirname(partial_path), "_#{File.basename(partial_path)}")
